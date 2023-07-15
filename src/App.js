@@ -9,6 +9,11 @@ import NotFound from './Components/NotFound/NotFound.jsx';
 import Layout from './Components/Layout/Layout.jsx';
 import Login from './Components/Login/Login.jsx';
 import Register from './Components/Register/Register.jsx';
+import { Provider } from 'react-redux';
+import store from './Redux/Store.js';
+
+
+
 
 const router = createBrowserRouter([
   {
@@ -29,10 +34,11 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
-      <RouterProvider router={router}>
-        <Layout />
-      </RouterProvider>
+      <Provider store={store}>
+        <RouterProvider router={router}>
+          <Layout />
+        </RouterProvider>
+      </Provider>
 
     </div>
   );

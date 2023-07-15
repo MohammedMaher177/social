@@ -8,7 +8,7 @@ export default function Layout(props) {
     return (
         <div>
             <Navbar />
-            <div className='main pt-5'>
+            <div className='main pt-5 container'>
 
                 <Outlet>
                 </Outlet>
