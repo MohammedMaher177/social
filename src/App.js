@@ -7,6 +7,8 @@ import Posts from './Components/Posts/Posts.jsx';
 import Movies from './Components/Movies/Movies.jsx';
 import NotFound from './Components/NotFound/NotFound.jsx';
 import Layout from './Components/Layout/Layout.jsx';
+import Login from './Components/Login/Login.jsx';
+import Register from './Components/Register/Register.jsx';
 
 const router = createBrowserRouter([
   {
@@ -15,9 +17,11 @@ const router = createBrowserRouter([
 
     children: [
       { path: "team", element: <Navbar />, },
-      { path: "home", element: <Home />, },
+      { index: true, element: <Home />, },
       { path: "posts", element: <Posts />, },
       { path: "movies", element: <Movies />, },
+      { path: "login", element: <Login />, },
+      { path: "signup", element: <Register />, },
       { path: "*", element: <NotFound />, },
     ],
   },
